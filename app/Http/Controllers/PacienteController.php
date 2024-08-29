@@ -10,6 +10,7 @@ use Intervention\Image\Image;
 
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\storePacienteRequest;
+use App\Http\Resources\PatientResource;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
 
@@ -47,7 +48,9 @@ class PacienteController extends Controller
 
         Paciente::create($validated);
 
-        return response()->json([201=>'Paciente criado com sucesso!'],201);;
+        return response()->json([
+            201=>'Paciente criado com sucesso!'
+        ],201);;
     }
 
     /**
@@ -63,7 +66,7 @@ class PacienteController extends Controller
             ], 404);
         }
 
-        return $paciente;
+        return new PatientResource($paciente);
     }
 
     /*

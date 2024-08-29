@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('consultas', function (Blueprint $table) {
-            $table->json('sintomas')->after('freqResp');
+        Schema::table('consults', function (Blueprint $table) {
+            $table->json('symptoms')->after('heartRate');
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('consultas', function (Blueprint $table) {
-            $table->dropColumn('sintomas');
+        Schema::table('consults', function (Blueprint $table) {
+            $table->dropColumn('symptoms');
         });
     }
 };

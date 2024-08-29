@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('consultas', function (Blueprint $table) {
+        Schema::create('consults', function (Blueprint $table) {
             $table->id();
-            $table->string('estado');
-            $table->double('freqCard');
-            $table->double('freqResp');
-            $table->foreignId('paciente_id');
+            $table->string('condition');
+            $table->double('heartRate');
+            $table->double('respiratoryRate');
+            $table->foreignId('patient_id');
             $table->timestamps();
  
 
-            $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
+            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('consultas');
+        Schema::dropIfExists('consults');
     }
 };

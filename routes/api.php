@@ -15,17 +15,17 @@ Route::get('/user', function (Request $request) {
 
 
 Route::controller(PacienteController::class)->group(function () {
-    Route::get('/pacientes', 'index');
-    Route::post('/pacientes', 'store');
-    Route::get('/pacientes/{id}', 'show');
-    Route::get('/pacientes/{id}/consultas', 'showConsultas');
-    Route::patch('/pacientes/{id}', 'update');
+    Route::get('/patients', 'index');
+    Route::post('/patients', 'store');
+    Route::get('/patients/{id}', 'show');
+    Route::get('/patients/{id}/consults', 'showConsultas');
+    Route::patch('/patients/{id}', 'update');
 });
 
 
 Route::controller(ConsultaController::class)->group(function () {
-    Route::get('/consultas', 'index');
-    Route::post('/consultas', 'store');
+    Route::get('/consults', 'index');
+    Route::post('/consults', 'store');
 });
  
 
