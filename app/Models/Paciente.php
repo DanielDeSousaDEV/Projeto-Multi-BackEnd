@@ -10,17 +10,19 @@ use App\Models\Consulta;
 class Paciente extends Model
 {
     use HasFactory; 
+
+    protected $table = 'patients';
  
     protected $fillable = [
-        'nome',
-        'condicao',
-        'dataNasc',
+        'name',
+        'condition',
+        'birthDate',
         'cpf',
-        'telefone',
-        'foto'
+        'telephone',
+        'photo'
     ];
 
-    public function consultas () {
+    public function consults () {
         return $this->hasMany(Consulta::class);
     }
 }

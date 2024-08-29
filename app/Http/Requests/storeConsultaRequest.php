@@ -27,11 +27,11 @@ class storeConsultaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'estado'=>'max:255|required',
-            'freqCard'=>'numeric|min:1|required',
-            'freqResp'=>'numeric|min:1|required',
-            'paciente_id'=>'integer|min:1|required',
-            'sintomas'=>'JSON|required'
+            'condition'=>'max:255|required',
+            'heartRate'=>'numeric|min:1|required',
+            'respiratoryRate'=>'numeric|min:1|required',
+            'patient_id'=>'integer|min:1|required',
+            'symptoms'=>'JSON|required'
         ]; 
     } 
 
@@ -43,19 +43,19 @@ class storeConsultaRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'estado.max'=>'o nome do estado ultrapassou o número maximo de letras',
-            'estado.required' => 'o estado é um campo obrigatorio',
-            'freqCard.numeric' => 'a frequencia cardiaca deve der informada como um número',
-            'freqCard.min'=>'a frequencia cardiaca deve ser maior que 1',
-            'freqCard.required'=>'o frequencia cardiaca é um campo obrigatorio',
-            'freqResp.numeric' => 'a frequencia respiratoria deve der informada como um número',
-            'freqResp.min'=>'a frequencia respiratoria deve ser maior que 1',
-            'freqResp.required'=>'o frequencia respiratoria é um campo obrigatorio',
-            'paciente_id.integer'=>'o campo paciente_id deve der informado como um número inteiro',
-            'paciente_id.min'=>'o campo paciente_id deve ser maior que 1',
-            'paciente_id.required'=>'o campo paciente_id é um campo obrigatorio',
-            'sintomas.JSON'=>'o campo sintomas deve ser uma string de json valida',
-            'sintomas.required'=>'o campo sintomas é um campo obrigatorio'
+            'condition.max'=>'o nome do condition ultrapassou o número maximo de letras',
+            'condition.required' => 'o condition é um campo obrigatorio',
+            'heartRate.numeric' => 'a frequencia cardiaca deve der informada como um número',
+            'heartRate.min'=>'a frequencia cardiaca deve ser maior que 1',
+            'heartRate.required'=>'o frequencia cardiaca é um campo obrigatorio',
+            'respiratoryRate.numeric' => 'a frequencia respiratoria deve der informada como um número',
+            'respiratoryRate.min'=>'a frequencia respiratoria deve ser maior que 1',
+            'respiratoryRate.required'=>'o frequencia respiratoria é um campo obrigatorio',
+            'patient_id.integer'=>'o campo patient_id deve der informado como um número inteiro',
+            'patient_id.min'=>'o campo patient_id deve ser maior que 1',
+            'patient_id.required'=>'o campo patient_id é um campo obrigatorio',
+            'symptoms.JSON'=>'o campo symptoms deve ser uma string de json valida',
+            'symptoms.required'=>'o campo symptoms é um campo obrigatorio'
         ];
     }
 

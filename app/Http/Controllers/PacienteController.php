@@ -31,7 +31,7 @@ class PacienteController extends Controller
     {
         $validated = $request->validated();
 
-        $bruteImg = $request['foto'];
+        $bruteImg = $request['photo'];
         $newName = $bruteImg->hashName();
         
         $brutePath = $bruteImg->path();
@@ -44,7 +44,7 @@ class PacienteController extends Controller
         $image->save($imagePath);
 
         $imageURL = asset('storage/fotos/'.$newName);
-        $validated['foto'] = $imageURL;
+        $validated['photo'] = $imageURL;
 
         Paciente::create($validated);
 

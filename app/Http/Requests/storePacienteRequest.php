@@ -27,12 +27,12 @@ class storePacienteRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome'=>['string','required'],
-            'condicao'=>['string','required'],
-            'dataNasc'=>['required'],
-            'cpf'=>[new CPF,'unique:pacientes','required'],
-            'telefone'=>[new Tel,'required'],
-            'foto'=>['image','required']
+            'name'=>['string','required'],
+            'condition'=>['string','required'],
+            'birthDate'=>['required'],
+            'cpf'=>[new CPF,'unique:patients','required'],
+            'telephone'=>[new Tel,'required'],
+            'photo'=>['image','required'] 
         ];
     }
 
@@ -44,16 +44,16 @@ class storePacienteRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'nome.string'=>'o campo nome deve ser uma string',
-            'nome.required'=>'o campo nome é um campo obrigatorio',
-            'condicao.string'=>'o campo condição deve ser um string',
-            'condicao.required'=>'o campo condicao é um campo obrigatorio',
-            'dataNasc.required'=>'o campo dataNasc é um campo obrigatorio',
+            'name.string'=>'o campo name deve ser uma string',
+            'name.required'=>'o campo name é um campo obrigatorio',
+            'condition.string'=>'o campo condição deve ser um string',
+            'condition.required'=>'o campo condition é um campo obrigatorio',
+            'birthDate.required'=>'o campo birthDate é um campo obrigatorio',
             'cpf.unique'=>'o campo cpf é um campo unico',
             'cpf.required'=>'o campo cpf é um campo obrigatorio',
-            'telefone.required'=>'o campo telefone é um campo obrigatorio',
-            'foto.image'=>'o campo image deve ser uma imagem',
-            'foto.required'=>'o campo foto é um campo obrigatorio',
+            'telephone.required'=>'o campo telephone é um campo obrigatorio',
+            'photo.image'=>'o campo image deve ser uma imagem',
+            'photo.required'=>'o campo photo é um campo obrigatorio',
         ];
     }
 

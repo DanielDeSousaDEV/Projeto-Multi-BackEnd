@@ -19,7 +19,7 @@ class Consulta extends Model
         'sintomas'
     ];
 
-    public function paciente () {
+    public function patient () {
         return $this->belongsTo(Paciente::class);
     }
 }
