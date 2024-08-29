@@ -20,6 +20,13 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
+  'laravellegends/pt-br-validator' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'LaravelLegends\\PtBrValidator\\ValidatorProvider',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 

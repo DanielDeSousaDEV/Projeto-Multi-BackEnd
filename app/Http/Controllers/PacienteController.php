@@ -38,7 +38,7 @@ class PacienteController extends Controller
         $image = $imageManager->read($brutePath);
         $image->coverDown(500,500);
 
-        $imagePath = storage_path('app\\public').'\\fotos\\'.$newName;
+        $imagePath = "../storage/app/public/fotos/$newName";
 
         $image->save($imagePath);
 
