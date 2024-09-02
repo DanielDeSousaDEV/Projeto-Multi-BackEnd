@@ -22,9 +22,9 @@ class PatientResource extends JsonResource
             'cpf'=>$this->cpf,
             'telephone'=>$this->telephone,
             'photo'=>$this->photo,
-            'consults'=>$this->consults,//talvez e tenha que usar o resource da consultas aqui e tbm da erro
             'created_at'=>$this->created_at,
             'updated_at'=>$this->updated_at
         ];
     }
 }
+//err no all do pacientes porque precisa  do consultas 
