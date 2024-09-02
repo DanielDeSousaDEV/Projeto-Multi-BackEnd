@@ -1,0 +1,7 @@
+cache/*
+sessions/*
+views/*
+
+!cache/
+!sessions/
+!views/
