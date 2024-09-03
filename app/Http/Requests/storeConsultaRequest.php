@@ -31,7 +31,7 @@ class storeConsultaRequest extends FormRequest
             'heartRate'=>'numeric|min:1|required',
             'respiratoryRate'=>'numeric|min:1|required',
             'patient_id'=>'integer|min:1|required',
-            'symptoms'=>'JSON|required'
+            'symptoms'=>'string|required'
         ]; 
     } 
 
@@ -54,7 +54,7 @@ class storeConsultaRequest extends FormRequest
             'patient_id.integer'=>'o campo patient_id deve der informado como um número inteiro',
             'patient_id.min'=>'o campo patient_id deve ser maior que 1',
             'patient_id.required'=>'o campo patient_id é um campo obrigatorio',
-            'symptoms.JSON'=>'o campo symptoms deve ser uma string de json valida',
+            'symptoms.string'=>'o campo symptoms deve ser um string',
             'symptoms.required'=>'o campo symptoms é um campo obrigatorio'
         ];
     }

@@ -11,15 +11,19 @@ class Consulta extends Model
 {
     use HasFactory;
 
+    protected $table = 'consults';
+
+    // protected $primaryKey = 'consults_id';
+
     protected $fillable = [
-        'estado',
-        'freqCard',
-        'freqResp',
-        'paciente_id',
-        'sintomas'
+        'condition',
+        'heartRate',
+        'respiratoryRate',
+        'patient_id',
+        'symptoms'
     ];
 
     public function patient () {
-        return $this->belongsTo(Paciente::class);
+        return $this->belongsTo(Paciente::class, 'id');
     }
 }

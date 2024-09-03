@@ -104,6 +104,6 @@ class PacienteController extends Controller
             ], 404);
         }
 
-        return $paciente->consultas()->orderBy('created_at', 'desc')->get();
+        return $paciente->consults()->orderBy('created_at', 'desc')->get();
     }
 }
