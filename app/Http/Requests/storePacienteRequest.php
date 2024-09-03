@@ -30,8 +30,8 @@ class storePacienteRequest extends FormRequest
             'name'=>['string','required'],
             'condition'=>['string','required'],
             'birthDate'=>['required'],
-            'cpf'=>[new CPF,'unique:patients','required'],
-            'telephone'=>[new Tel,'required'],
+            'cpf'=>['cpf','unique:patients','required'],
+            'telephone'=>['telefone_com_ddd','required'],
             'photo'=>['image','required'] 
         ];
     }
@@ -51,6 +51,7 @@ class storePacienteRequest extends FormRequest
             'birthDate.required'=>'o campo birthDate é um campo obrigatorio',
             'cpf.unique'=>'o campo cpf é um campo unico',
             'cpf.required'=>'o campo cpf é um campo obrigatorio',
+            'telephone.telefone_com_ddd'=>'o campo telephone está em um formato invalido',
             'telephone.required'=>'o campo telephone é um campo obrigatorio',
             'photo.image'=>'o campo image deve ser uma imagem',
             'photo.required'=>'o campo photo é um campo obrigatorio',
