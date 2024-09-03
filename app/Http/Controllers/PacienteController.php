@@ -102,7 +102,9 @@ class PacienteController extends Controller
             return response()->json([
                 '404'=>'Resouce not found'
             ], 404);
-        }
+        };
+
+        
 
         return $paciente->consults()->orderBy('created_at', 'desc')->get();
     }

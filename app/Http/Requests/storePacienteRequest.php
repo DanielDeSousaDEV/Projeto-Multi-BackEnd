@@ -53,7 +53,7 @@ class storePacienteRequest extends FormRequest
             'cpf.required'=>'o campo cpf é um campo obrigatorio',
             'telephone.telefone_com_ddd'=>'o campo telephone está em um formato invalido',
             'telephone.required'=>'o campo telephone é um campo obrigatorio',
-            'photo.image'=>'o campo image deve ser uma imagem',
+            'photo.image'=>'o campo photo deve ser uma imagem',
             'photo.required'=>'o campo photo é um campo obrigatorio',
         ];
     }
