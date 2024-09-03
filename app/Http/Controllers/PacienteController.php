@@ -96,7 +96,7 @@ class PacienteController extends Controller
      */
     public function showConsultas($id)
     {
-        $paciente = Paciente::find($id);
+        $paciente = Paciente::where('id', $id)->first();
 
         if (!$paciente) {
             return response()->json([
