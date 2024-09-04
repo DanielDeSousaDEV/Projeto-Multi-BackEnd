@@ -83,12 +83,12 @@ class PacienteController extends Controller
         }
         
         $validated = $request->validate([
-            'condicao'=>'string|required'
+            'condition'=>'string|required'
         ]);
-
+        
         $paciente->update($validated);
 
-        return $paciente;
+        return new PatientResource($paciente);
     }
 
     /**
@@ -102,9 +102,7 @@ class PacienteController extends Controller
             return response()->json([
                 '404'=>'Resouce not found'
             ], 404);
-        };
-
-        
+        };        
 
         return $paciente->consults()->orderBy('created_at', 'desc')->get();
     }

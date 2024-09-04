@@ -31,7 +31,7 @@ class storeConsultaRequest extends FormRequest
             'heartRate'=>'numeric|min:1|required',
             'respiratoryRate'=>'numeric|min:1|required',
             'patient_id'=>'integer|min:1|required',
-            'symptoms'=>'string|required'
+            'symptoms'=>'string|nullable'
         ]; 
     } 
 
