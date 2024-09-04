@@ -81,6 +81,8 @@ class PacienteController extends Controller
                 '404'=>'Resouce not found'
             ], 404);
         }
+
+        // dd($request);
         
         $validated = $request->validate([
             'condition'=>'string|required'
