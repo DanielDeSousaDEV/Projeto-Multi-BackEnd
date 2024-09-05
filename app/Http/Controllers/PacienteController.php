@@ -46,11 +46,7 @@ class PacienteController extends Controller
         $imageURL = asset('storage/fotos/'.$newName);
         $validated['photo'] = $imageURL;
 
-        Paciente::create($validated);
-
-        return response()->json([
-            201=>'Paciente criado com sucesso!'
-        ],201);;
+        return Paciente::create($validated);
     }
 
     /**

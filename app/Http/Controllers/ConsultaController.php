@@ -26,7 +26,7 @@ class ConsultaController extends Controller
         
         // return $validated['paciente_id'];
         
-        Consulta::create($validated);
+        return Consulta::create($validated);
         //pode dar dando erro porque não tem pacientes no sistema
     }
 }
